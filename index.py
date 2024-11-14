@@ -12,7 +12,8 @@ app.register_blueprint(difficulty_bp)
 def home():
     return "MACHINES CTF API"
 
-# comment this if want deploy to vercel
-if __name__ == '__main__':
-    db.create_all()
-    app.run(debug=True)
+db.create_all()
+# uncomment this if want deploy locally
+# if __name__ == '__main__':
+#     db.create_all()
+#     app.run(debug=True)
